@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINGDOM STUDIES | Study God's Word Together</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Base styles from Phase 1 -->
+    <link rel="stylesheet" href="studies-styles.css"> <!-- Phase 2 styles -->
+</head>
+<body class="studies-bg">
+    <!-- Navigation (Reused from Phase 1) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-crown gold-icon"></i>
+                <div class="logo-text">
+                    <h1>KINGDOM TALK</h1>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Talk</a>
+                <a href="#" class="active">Study</a>
+                <a href="#">Grow</a>
+                <a href="#">Read</a>
+            </nav>
+            <div class="user-profile">
+                <i class="fa-regular fa-bell"></i>
+                <div class="avatar">LM</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container studies-container">
+        <!-- Dashboard Header & Actions -->
+        <section class="studies-header">
+            <div>
+                <h2>KINGDOM STUDIES</h2>
+                <p>Open the Bible with believers around the world.</p>
+            </div>
+            <button class="btn-primary" id="openCreateModalBtn"><i class="fa-solid fa-plus"></i> Start a Bible Study</button>
+        </section>
+
+        <!-- Global Bible Study Discovery Filter -->
+        <section class="discovery-filter">
+            <h3>Find a Bible Study</h3>
+            <form class="filter-grid">
+                <div class="filter-group">
+                    <label>Topic / Book</label>
+                    <select>
+                        <option>Any Topic</option>
+                        <option>Marriage</option>
+                        <option>Gospel of John</option>
+                        <option>Book of James</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Meeting Day</label>
+                    <select>
+                        <option>Any Day</option>
+                        <option>Tuesday</option>
+                        <option>Thursday</option>
+                        <option>Saturday</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Time of Day</label>
+                    <select>
+                        <option>Any Time</option>
+                        <option>Morning</option>
+                        <option>Evening</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Language</label>
+                    <select>
+                        <option>English</option>
+                        <option>Spanish</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-secondary search-filter-btn">Search</button>
+            </form>
+            <p class="timezone-notice"><i class="fa-solid fa-globe"></i> Showing meeting times in your local time zone (EST)[cite: 2].</p>
+        </section>
+
+        <!-- Study Rooms Grid -->
+        <section class="studies-grid">
+            <!-- Card 1: Community-led[cite: 2] -->
+            <div class="study-card">
+                <div class="card-header">
+                    <span class="badge community-badge">Community-Led Study</span>
+                    <button class="report-btn" title="Report this study[cite: 2]"><i class="fa-solid fa-flag"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>The Book of James</h3>
+                    <p class="host">Hosted by Michael R.</p>
+                    <ul class="study-details">
+                        <li><i class="fa-regular fa-calendar"></i> Tuesdays</li>
+                        <li><i class="fa-regular fa-clock"></i> 7:00 PM EST</li>
+                        <li><i class="fa-solid fa-users"></i> 12 Members</li>
+                        <li><i class="fa-solid fa-stopwatch"></i> 6-Week Study</li>
+                    </ul>
+                    <p class="access public">Open to Everyone</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-primary w-100">Join Study</button>
+                </div>
+            </div>
+
+            <!-- Card 2: Private/Request Join[cite: 2] -->
+            <div class="study-card">
+                <div class="card-header">
+                    <span class="badge community-badge">Community-Led Study</span>
+                    <button class="report-btn" title="Report this study"><i class="fa-solid fa-flag"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Biblical Marriage</h3>
+                    <p class="host">Hosted by David & Sarah T.</p>
+                    <ul class="study-details">
+                        <li><i class="fa-regular fa-calendar"></i> Thursdays</li>
+                        <li><i class="fa-regular fa-clock"></i> 8:00 PM EST</li>
+                        <li><i class="fa-solid fa-users"></i> 18 Members</li>
+                        <li><i class="fa-solid fa-bullseye"></i> Married & Engaged Couples</li>
+                    </ul>
+                    <p class="access private"><i class="fa-solid fa-lock"></i> Request Required</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-outline w-100">Request to Join</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Official Study[cite: 2] -->
+            <div class="study-card official-card">
+                <div class="card-header">
+                    <span class="badge official-badge"><i class="fa-solid fa-crown"></i> KINGDOM TALK OFFICIAL</span>
+                </div>
+                <div class="card-body">
+                    <h3>New Believers — Gospel of John</h3>
+                    <p class="host">Hosted by Kingdom Talk</p>
+                    <ul class="study-details">
+                        <li><i class="fa-regular fa-calendar"></i> Saturdays</li>
+                        <li><i class="fa-regular fa-clock"></i> 10:00 AM EST</li>
+                        <li><i class="fa-solid fa-users"></i> 31 Members</li>
+                        <li><i class="fa-solid fa-seedling"></i> Beginner Friendly</li>
+                    </ul>
+                    <p class="access public">Open to Everyone</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-primary w-100">Join Study</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Create Study Modal -->
+    <div class="modal-overlay" id="createStudyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start a Bible Study</h2>
+                <button class="close-modal" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="create-study-form">
+                <!-- Following exact fields requested in the vision document[cite: 2] -->
+                <div class="form-row">
+                    <label>Study Name</label>
+                    <input type="text" placeholder="e.g., The Book of Romans" required>
+                </div>
+                <div class="form-row">
+                    <label>Bible Book / Topic</label>
+                    <input type="text" placeholder="e.g., Romans, Marriage, Faith" required>
+                </div>
+                <div class="form-row">
+                    <label>Description</label>
+                    <textarea rows="3" placeholder="What will this study cover?"></textarea>
+                </div>
+                
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Start Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Expected Duration</label>
+                        <select><option>Ongoing</option><option>4 Weeks</option><option>6 Weeks</option></select>
+                    </div>
+                    <div class="form-row">
+                        <label>Meeting Day</label>
+                        <select><option>Monday</option><option>Tuesday</option><option>Wednesday</option></select>
+                    </div>
+                    <div class="form-row">
+                        <label>Meeting Time & Zone</label>
+                        <div class="time-zone-input">
+                            <input type="time" required>
+                            <select><option>EST</option><option>CST</option><option>PST</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Privacy</label>
+                        <select><option>Public (Open to everyone)</option><option>Private (Request required)</option></select>
+                    </div>
+                    <div class="form-row">
+                        <label>Max Participants</label>
+                        <input type="number" placeholder="Optional limit">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        I agree to the Kingdom Talk Community Guidelines and understand this will be listed as a Community-Led Study[cite: 2].
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-large">Create Study Room</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="studies.js"></script>
+</body>
+</html>

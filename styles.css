@@ -1,0 +1,249 @@
+:root {
+    --primary-green: #4a6750;
+    --primary-green-hover: #3d5642;
+    --bg-color: #f9f9f7;
+    --card-bg: #ffffff;
+    --text-dark: #222222;
+    --text-light: #555555;
+    --border-color: #e0e0e0;
+    --gold: #cba052;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typography & Utilities */
+.gold-icon { color: var(--gold); }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-primary:hover { background-color: var(--primary-green-hover); }
+
+.btn-large {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    transition: background 0.3s;
+}
+.btn-large:hover { background-color: var(--primary-green-hover); }
+
+/* Navigation */
+.navbar {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-text h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.logo-text p {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.nav-links a.active { color: var(--text-dark); border-bottom: 2px solid var(--gold); }
+.nav-links a { color: var(--text-light); }
+.nav-links a:hover { color: var(--text-dark); }
+.search-btn { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text-light); }
+.mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.hero-overlay {
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+.hero-content h2 { font-size: 3.5rem; letter-spacing: 2px; }
+.hero-tagline { font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-dark); margin-bottom: 30px; }
+.hero-quote { font-family: var(--font-serif); font-style: italic; color: var(--text-light); max-width: 300px; border-left: 3px solid var(--gold); padding-left: 15px; }
+
+/* Daily Question Section */
+.daily-question-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+.question-card { padding: 50px; }
+.label { font-size: 0.85rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; text-transform: uppercase; }
+.question-card h2 { font-size: 2.5rem; margin: 15px 0 30px; line-height: 1.2; }
+.scripture { display: flex; gap: 15px; margin-bottom: 40px; }
+.scripture i { font-size: 1.5rem; color: var(--text-light); margin-top: 5px; }
+.scripture-text strong { display: block; margin-bottom: 5px; color: var(--text-dark); }
+.scripture-text p { font-family: var(--font-serif); font-style: italic; color: var(--text-light); }
+.stats { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px; color: var(--text-light); font-size: 0.95rem; }
+
+.image-card {
+    background: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-card-text h3 {
+    font-family: 'Nothing You Could Do', cursive, var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+}
+
+/* Pillars Section */
+.pillars-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.pillar { text-align: center; flex: 1; }
+.pillar i { font-size: 2rem; color: var(--text-dark); margin-bottom: 15px; }
+.pillar h4 { font-size: 0.9rem; font-family: var(--font-sans); letter-spacing: 1px; }
+.pillar p { font-size: 0.9rem; color: var(--text-light); font-family: var(--font-serif); font-style: italic; }
+
+/* Recent Talks */
+.recent-talks { padding: 60px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.section-header h2 { font-size: 2rem; }
+.view-all { font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+.talks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.talk-card { background: white; padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.talk-card .date { font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-transform: uppercase; }
+.talk-card h3 { font-size: 1.2rem; margin: 10px 0 20px; line-height: 1.4; }
+.comment-count { font-size: 0.85rem; color: var(--text-light); display: flex; align-items: center; gap: 8px; }
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    margin-bottom: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.about-content { padding: 50px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.about-content h2 { font-size: 2rem; margin-bottom: 20px; }
+.about-content p { color: var(--text-light); margin-bottom: 30px; font-size: 1.05rem; }
+.about-image {
+    background: url('https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image-text h3 {
+    font-family: 'Nothing You Could Do', cursive, var(--font-serif);
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    transform: rotate(-5deg);
+}
+
+/* Footer */
+footer { background: #d7b57b; background: linear-gradient(to bottom, #ebd5a3, #b88a44); padding: 60px 20px 20px; color: var(--text-dark); text-align: center; }
+.footer-top { margin-bottom: 40px; }
+.footer-top p:first-child { font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 20px; }
+.large-crown { font-size: 2.5rem; color: #fff; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+.footer-tagline { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; }
+.footer-bottom { background: #1a1a1a; color: white; margin: 0 -20px -20px; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.footer-logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; color: var(--gold); }
+.copyright { font-size: 0.8rem; color: #888; }
+.footer-links { display: flex; align-items: center; gap: 20px; font-size: 0.85rem; }
+.footer-links a:hover { color: var(--gold); }
+.socials { display: flex; gap: 15px; margin-left: 20px; }
+.socials a { font-size: 1.1rem; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .daily-question-section, .about-section { grid-template-columns: 1fr; }
+    .image-card, .about-image { min-height: 300px; }
+    .talks-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .socials { margin-left: 0; justify-content: center; margin-top: 10px; }
+}
